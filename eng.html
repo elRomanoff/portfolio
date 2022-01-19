@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/6e00bf5932.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <!-- <i class="fab fa-js-square"></i> -->
+
+
+        <div class="menu-container">
+            <div class="menu menu-left">
+                <p>Facundo Romano</p>
+            </div>
+            <div class="menu menu-center">
+                <p>Javascript Developer</p>
+            </div>
+            <div class="menu menu-right">
+                <p>
+                    <i class="fas fa-ellipsis-h"></i>
+                </p>
+                <div class="menu-desplegable hidden">
+                    <div class="menu-item"><a href="index.html">See in spanish</a><i class="fas fa-language"></i></div>
+                    <div class="menu-item"><a href="#contact">Contact</a><i class="fas fa-user-alt"></i></div>
+                    <div class="menu-item"><a href="">Download CV</a><i class="far fa-file"></i></div>
+                </div>
+            </div>
+
+        </div>
+        <header class="header">
+            <div class="texto-principal">
+                <p>
+                    Web developer with wide knowledge of javascript. I manage advanced concepts such as closures, OOP, modules, animations, asynchrony, etc. I am already on my way of learning Node js and React, but i'm not an expert on those yet. I also have experience with MySQL databases.
+                </p>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="articulos">
+                <h1 class="proyectos">Proyects</h1>
+                <article class="article s100">
+                    <p>My portfolio can be kind of unusual, becouse despite of the fact that I have already built a couple of websites, I don't consider them important proyects, becouse most of my technical knowledge is shown in the following examples:</p>
+                </article>
+                <article class="article">
+                    <img src="img/descarga.jpg" alt="">
+                    <h2>Doki Doki Literature Club (Browser Edition)</h2>
+                    <h4>Link: <a href="https://ddlc.herokuapp.com">DOKI DOKI</a></h4>
+                    <p>Technologies used: HTML, CSS, JAVASCRIPT(VAINILLA), NODEJS, FIREBASE BUCKET, JSON</p>
+                    <span class="span" id="doki-span">Show Details</span>
+                    <p class="hidden detalles" id="doki-detalles">
+                        This is actually my biggest proyect and the one i feel most proud of. This is an already existing visual novel for PC which i tried to recreate using only DOM objects and vanilla javascript (no canvas or libraries). It has been a real challenge to make the design just like the original game. It also has an small backend made with with expressJS. Most of my web development knowledge is shown in this proyect.
+                    </p>
+                </article>
+                <article class="article">
+                    <img src="img/sonic.jpg" alt="">
+                    <h2>Chaos Crush</h2>
+                    <h4>Link: <a href="https://elromanoff.github.io/candy-crush/">Chaos Crush</a></h4>
+                    <h4>Github Link: <a
+                            href="https://github.com/elRomanoff/candy-crush">https://github.com/elRomanoff/candy-crush</a>
+                    </h4>
+                    <p>Herramientas utilizadas: HTML, CSS, JAVASCRIPT (VAINILLA)</p>
+                    <span class="span" id="crush-span">Show Details</span>
+                    <p class="hidden detalles" id="crush-detalles">
+                        Mini-videogame with the style of candy crush or Bejeweled, not much to say about it. I programmed it as an excercise to play with linked list made from javascript classes with their own methods. Also built with vanilla javascript and DOM. With css, I applied flexbox, transitions, and as a detail, css filters to generate every color of the chaos emeralds.
+                    </p>
+                </article>
+            </div>
+            <aside class="aside">
+                <div class="skills">
+                    <h3>Skills</h3>
+                    <div class="bar">
+                        <div class="info">
+                            <span>Javascript</span>
+                        </div>
+                        <div class="progress-line javascript"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>HTML + CSS</span>
+                        </div>
+                        <div class="progress-line html"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="progress-line mysql"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>ExpressJs</span>
+                        </div>
+                        <div class="progress-line express"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>POO</span>
+                        </div>
+                        <div class="progress-line poo"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <a id="github" name="contact"><i class="fab fa-github-square"></i></a>
+                    <a id="linkedin"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </aside>
+        </section>
+        <footer class="footer" style="display:hidden;">
+            <a href=""></a>
+        </footer>
+    </div>
+    <script src="app.js" type="text/javascript" eng="true"></script>
+</body>
+
+</html>

@@ -1,0 +1,324 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+a{
+    text-decoration: none;
+}
+.container{
+    display:flex;
+    flex-flow: column nowrap;
+    position: relative
+}
+
+.menu-container{
+    color: #eee;
+    background-color:black;
+    display: flex;
+    justify-content: space-around;
+    min-height: 50px;
+    align-items: center;
+}
+.menu{
+    width: 25%;
+    display: flex;
+}
+.menu p{
+    font-size:22px
+}
+
+.menu-right{
+    justify-content: flex-end;
+    font-size: 30px;
+    position: relative
+}
+    .menu-desplegable{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 22px;
+        position:absolute;
+        top: 50px;
+        background: #149;
+        width: 100%;
+        padding: 5px;
+    }
+    .menu-item{
+        width: 100%;
+        height:50px;
+        display:flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #149;
+        border-bottom: 2px solid white;
+        overflow: hidden;
+    }
+
+.menu-center{
+    justify-content: center;
+}
+.menu-left{
+    justify-content: flex-start;
+}
+.menu-right a {
+    color: #eee
+}
+
+.menu-absolute{
+    position:absolute;
+    background-color: transparent;
+    align-items: center;
+    justify-content: center;
+    width:100vw
+}
+
+.header{
+    background-image: url(img/monika.jpg);
+    background-position: center;
+    background-size:cover;
+    display:flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+    .texto-principal{
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+    .texto-principal p{
+        background-color: rgba(0,0,0,.4);
+        height: max-content;
+        font-family: "Lora", serif;
+        font-size: 21px;
+        color: #eee;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.6;
+        padding: 5% 10%;
+        
+    }
+.section{
+    background:#eee;
+    display:flex;
+}
+.proyectos{
+    margin: 30px auto;
+    font-weight: 400;
+    display: flex
+}
+    .articulos{
+        display: flex;
+        flex: 2 1 70%;
+        flex-wrap: wrap;
+        padding: 0 7%;
+        
+    }
+    .s100{
+        width: 100%
+    }
+        .article{
+            /* flex: 1 1 auto;  */
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding-bottom: 40px
+        }
+        .article img{
+            width:100%;
+            object-fit: cover;
+        }
+        .article p{
+            color: black;
+        }
+        .article h2{
+            font-weight: 500;
+            margin: 10px 0
+        }
+        .span{
+            cursor: pointer;
+            color: blue
+        }
+        .detalles{
+            margin-top: 5px
+        }
+    
+    .aside{
+        display: flex;
+        background: #ddd;
+        flex: 1 0 28%;
+        font-family: "Poppins", sans-serif;
+        flex-flow: column;
+        align-items: center;
+        padding-top: 50px;
+        /* padding-left: -7%; */
+        justify-content: space-between;
+        font-size:17px;
+    }
+
+        .aside h3{
+            font-weight: 400;
+        }
+
+        .skills{
+            width: 85%;
+        }
+        .skills .bar{
+            margin: 30px auto;
+        }
+        .skills .bar :first-child{
+            margin-top: 0px;
+        }
+        .skills .bar .info{
+            margin-bottom: 5px;
+        }
+        .skills .bar .info span{
+            font-weight: 500;
+        }
+            .skills .bar .progress-line {
+                border-radius: 10px;
+                position: relative;
+                height: 10px;
+                width: 100%;
+                background-color: #f0f0f0;
+                box-shadow: inset 0px 1px 1px rgba(0,0,0,.1),
+                                0px 1px rgba(255,255,255,.8);
+            }
+                .bar .progress-line span{
+                    height: 100%;
+                    /* width: 80%; */
+                    background: #308ded;
+                    position: absolute;
+                    border-radius: 10px;
+                }
+                .bar .progress-line span::before{
+                    position: absolute;
+                    content: "";
+                    right: 0;
+                    top:-10px;
+                    height: 0;
+                    width: 0;
+                    border: 7px solid transparent;
+                    border-bottom-width: 0px;
+                    border-right-width: 0px;
+                    border-top-color: #000;
+                }
+                .bar .progress-line span::after{
+                    color: white;
+                    position: absolute;
+                    /* content: "80%"; */
+                    top:-28px;
+                    right:0;
+                    font-weight: 500;
+                    font-size: 12px;
+                    background:#000;
+                    padding: 1px 8px;
+                    border-radius: 3px
+                }
+
+
+                .progress-line.javascript span{
+                    width: 85%
+                }
+                .progress-line.javascript span::after{
+                    content:"85%"
+                }
+
+                .progress-line.html span{
+                    width: 50%
+                }
+                .progress-line.html span::after{
+                    content:"50%"
+                }
+
+                .progress-line.mysql span{
+                    width: 65%
+                }
+                .progress-line.mysql span::after{
+                    content:"65%"
+                }
+
+                .progress-line.express span{
+                    width: 40%
+                }
+                .progress-line.express span::after{
+                    content:"40%"
+                }
+                
+               .progress-line.poo span{
+                    width: 60%
+                }
+                .progress-line.poo span::after{
+                    content:"65%"
+                }
+    .contact{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        margin: 30px 0
+    }
+    .contact a{
+        font-size: 30px;
+        cursor: pointer
+    }
+
+
+.footer{
+    background:#111;  
+    display: flex;
+    justify-content: center
+}
+    .pie{
+        background: #e6af2e;
+        width: 300px;
+    }
+
+
+.hidden{
+    display:none;
+}
+
+@media all and (max-width: 800px){
+
+    .section{
+        flex-direction: column;
+    } 
+    .menu-container{
+        flex-direction: column;
+        height: auto;
+    }
+    .menu{
+        width: 100%;
+        justify-content:center; 
+        padding: 5px
+    }
+    .menu-left{
+        margin: 0;
+    }
+    .menu-right{
+        margin:0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-desplegable{
+        position: static;
+    }
+    .aside{
+        display:flex;
+        /* justify-content:center; */
+        flex: 1 1 auto;
+    }
+}
+@media all and (max-width: 600px){
+    .texto-principal p {
+        font-size: 19px;
+    }
+}

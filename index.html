@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://kit.fontawesome.com/6e00bf5932.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+</head>
+<body>
+
+
+    <div class="container">
+        <!-- <i class="fab fa-js-square"></i> -->
+        
+            
+        <div class="menu-container">
+            <div class="menu menu-left">
+                <p>Facundo Romano</p>
+            </div>
+            <div class="menu menu-center">
+                <p>Programador Javascript</p>
+            </div>
+            <div class="menu menu-right">
+                <p>
+                    <i class="fas fa-ellipsis-h"></i>
+                </p>  
+                <div class="menu-desplegable hidden">
+                    <div class="menu-item"><a href="eng.html">Ver en inglés</a><i class="fas fa-language"></i></div>
+                    <div class="menu-item"><a href="#contact">Contacto</a><i class="fas fa-user-alt"></i></div>
+                    <div class="menu-item"><a href="">Descargar CV</a><i class="far fa-file"></i></div>
+                </div>
+            </div>
+
+        </div>
+        <header class="header">
+            <div class="texto-principal">
+                <p>
+                    Programador web con amplio conocimiento en javascript. Puedo considerarme fullstack, pero mi verdadero fuerte es la programación en el frontend. Manejo conceptos relativamente avanzados como closures, programacón orientada a objetos, módulos, algunas animaciones, etc.
+                </p>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="articulos">
+                <h1 class="proyectos">Proyectos</h1>
+                <article class="article s100">
+                    <!-- <p></p> -->
+                </article>
+                <article class="article">
+                    <img src="img/descarga.jpg" alt="">
+                    <h2>Doki Doki Literature Club (Browser Edition)</h2>
+                    <h4>Link: <a href="https://ddlc.herokuapp.com">DOKI DOKI</a></h4>
+                    <p>Herramientas utilizadas: HTML, CSS, JAVASCRIPT(VAINILLA), NODEJS, FIREBASE BUCKET, JSON</p>
+                    <span class="span" id="doki-span">Mostrar Detalles</span>
+                    <p class="hidden detalles" id="doki-detalles">Este es mi proyecto más grande y del cual me siento más orgulloso. Se trata de un videojuego de estilo novela visual anime desarrollado por Team Salvato para PC. Aprovechando la simpleza del juego, decidí intentar programarlo desde cero con HTML, CSS y Javascript vainilla, únicamente utilizando elementos del DOM (nada de canvas). La mayor parte de mi conocimiento de programación web puede reflejarse en este proyecto.</p>
+                    
+                </article>
+                <article class="article">
+                    <img src="img/sonic.jpg" alt="">
+                    <h2>Chaos Crush</h2>
+                    <h4>Link: <a href="https://elromanoff.github.io/candy-crush/">Chaos Crush</a></h4>
+                    <h4>Github Link: <a href="https://github.com/elRomanoff/candy-crush">https://github.com/elRomanoff/candy-crush</a></h4>
+                    <p>Herramientas utilizadas: HTML, CSS, JAVASCRIPT (VAINILLA)</p>
+                    <span class="span" id="crush-span">Mostrar Detalles</span>
+                    <p class="hidden detalles" id="crush-detalles">Juego de combinaciones del estilo Bejeweled o Candy Crush, no hay mucho que decir al respecto. Lo programé porque quise jugar un poco con las listas enlazadas, hechas a partir de clases y con sus propios métodos.
+                    Tambien desarrollado en javascript vainilla y usando únicamente elementos del DOM. En este proyecto manejo conceptos de javascript como el anteriormente mencionado. En cuanto a css, aplico animaciones, flexbox y, como detalle, filtros para generar los colores de las esmeraldas del caos (la imagen de las gemas es solo una, la verde, a la que le aplico filtros de css para lograr los otros colores).
+                    </p>
+                </article>
+            </div>
+            <aside class="aside">
+                <div class="skills">
+                    <h3>Habilidades</h3>
+                    <div class="bar">
+                        <div class="info">
+                            <span>Javascript</span>
+                        </div>
+                        <div class="progress-line javascript"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>HTML + CSS</span>
+                        </div>
+                        <div class="progress-line html"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>MySQL</span>
+                        </div>
+                        <div class="progress-line mysql"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>ExpressJs</span>
+                        </div>
+                        <div class="progress-line express"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>POO</span>
+                        </div>
+                        <div class="progress-line poo"><span></span></div>
+                    </div>
+                </div>
+
+                <div class="contact">
+                    <a id="github" name="contact"><i class="fab fa-github-square"></i></a>
+                    <a id="linkedin"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </aside>
+        </section>
+        <footer class="footer" style="display:hidden;">
+            <a href=""></a>
+        </footer>
+    </div>
+
+    <script> let english = false </script>
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>
