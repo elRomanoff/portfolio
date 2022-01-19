@@ -3,8 +3,14 @@ const github = document.getElementById("github")
 const right = document.querySelector(".menu-right")
 const spanList = document.querySelectorAll(".span")
 const menuDesplegable = document.querySelector(".menu-desplegable")
+const cv = document.getElementById("cv")
+const eng = document.currentScript.getAttribute("eng")
 
-
+if(eng){
+    cv.href = "cven.pdf"
+}else{
+    cv.href = "cves.pdf"
+}
 
 linkedin.addEventListener("click", ()=>{
     window.open("https://www.linkedin.com/in/facundo-romano-a9b786129/")
@@ -16,7 +22,6 @@ right.addEventListener("click", ()=>{
     menuDesplegable.classList.toggle("hidden")
 })
 
-const eng = document.currentScript.getAttribute("eng")
 
 spanList.forEach(x => x.addEventListener("click", () => {
     x.parentNode.lastElementChild.classList.toggle("hidden");
@@ -30,6 +35,3 @@ spanList.forEach(x => x.addEventListener("click", () => {
         else x.innerHTML = "Mostrar Detalles"
     }
 }))
-
-
-const uwu = "uwu"
