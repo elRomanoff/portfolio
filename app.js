@@ -7,7 +7,7 @@ const cv = document.getElementById("cv")
 const eng = document.currentScript.getAttribute("eng")
 
 if(eng){
-    cv.href = "cven.pdf"
+    cv.href = "Curriculum vitae (1).pdf"
 }else{
     cv.href = "cves.pdf"
 }
