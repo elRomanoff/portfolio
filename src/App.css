@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding:0;
+}
+
+body{
+    /* background: #f3bad6; */
+    background: #0d1016;
+    margin:0;
+    padding:0;
+    width: 100%;
+    min-height: 100%;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+}
+
+.content{
+    position: relative;
+    /* min-height: 150vh; */
+    background-color: #0d1016;
+    /* box-shadow: 10px 0 0 -10px rgba(255, 255, 255, 0.5); */
+    display:flex;
+    flex-direction: column;
+}
+
+
+.upper_banner{
+    display: inline-block
+}
+
+.upper_banner img {
+    width: 100%;
+    height: auto;
+}
+
+.pink-text{
+    color: #b867a6
+}
+.pink-bg{
+    background-color: #b867a6
+}
+
+.grey-text{
+    color: #656c74;
+}
