@@ -42,5 +42,12 @@ body{
 }
 
 .grey-text{
-    color: #656c74;
+    color: #88909b;
+}
+.violet-bg{
+    background-color: rgba(0,0,0,.3);
+}
+
+.roman{
+    font-family: 'Times New Roman', Times, serif;
 }

@@ -10,11 +10,11 @@ const DetailsComponent = ({description}) => {
   return (
     description ? 
     <>
-      <i className='text-2xl pink-text block cursor-pointer' onClick={toggleDetails}>
+      <i className='text-3xl pink-text block cursor-pointer drop-shadow-[0_1.2px_1.2px_rgb(255,255,255)]' onClick={toggleDetails}>
         {showDetails ? 'Hide details' : 'Show details'}
       </i>
       {showDetails && (
-        <div className="text-lg">
+        <div className="text-2xl my-5">
           {description}
         </div>
       )}

@@ -19,6 +19,11 @@ export default function Content({filter}) {
         fetchRepositories();
     }, []);
 
+    function toggleImg(e){
+        e.target.parentNode.classList.toggle("h-36")
+        e.target.parentNode.classList.toggle("rounded-full")
+    }
+
     const filtered = repositories.filter(x => filter ? x.topics.includes(filter) : true)
 
     return (
@@ -27,11 +32,19 @@ export default function Content({filter}) {
         <li className='mt-20' key={repo.id}>
             <h2 className='font-bold text-3xl capitalize my-6'><span className="pink-text text-2xl">•</span> {repo.name}</h2>
             <div className='w-full h-36 rounded-full object-center overflow-hidden my-3 relative'>
-                <img className="relative bottom-20 w-full" src={`https://raw.githubusercontent.com/elRomanoff/${repo.name}/master/descarga.png`} alt="" onError={(e)=>{e.target.src = generic}}/>
+                <img
+                 
+                className="relative bottom-20 w-full" 
+                src={`https://raw.githubusercontent.com/elRomanoff/${repo.name}/master/descarga.png`} 
+                alt=""  
+                onError={(e)=>{e.target.src = generic}}
+                onClick={toggleImg}
+
+                />
             </div>
             <b className='text-2xl block my-6'>Link: <a className="pink-text" target="_blank"  rel="noreferrer" href={repo.homepage}>{repo.name}</a></b>
             {/* <b className='text-sm block'>Github Link: <span className="pink-text">github.com/doki-doki</span></b> */}
-            <p className='grey-text leading-6 my-5 text-xl mx-20'>Herramientas utilizadas: {repo.topics.join(", ")}</p>
+            <p className='grey-text leading-6 my-5 text-xl mx-20'>Tools Used: {repo.topics.join(", ")}</p>
             <DetailsComponent description={repo.description}/>
         </li>
         ))}
