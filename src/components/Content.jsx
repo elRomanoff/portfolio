@@ -20,8 +20,14 @@ export default function Content({filter}) {
     }, []);
 
     function toggleImg(e){
-        e.target.parentNode.classList.toggle("h-36")
-        e.target.parentNode.classList.toggle("rounded-full")
+        setTimeout(() => {
+            e.target.parentNode.classList.toggle("h-36")
+        }, 1);
+        setTimeout(() => {
+            e.target.parentNode.classList.toggle("rounded-full")
+        }, 1);
+
+        e.target.classList.toggle("bottom-20")
     }
 
     const filtered = repositories.filter(x => filter ? x.topics.includes(filter) : true)
@@ -31,10 +37,10 @@ export default function Content({filter}) {
         {filtered.map((repo) => (
         <li className='mt-20' key={repo.id}>
             <h2 className='font-bold text-3xl capitalize my-6'><span className="pink-text text-2xl">•</span> {repo.name}</h2>
-            <div className='w-full h-36 rounded-full object-center overflow-hidden my-3 relative'>
+            <div className='w-full h-36 rounded-full object-center overflow-hidden my-3 relative transition-all ease-linear'>
                 <img
                  
-                className="relative bottom-20 w-full" 
+                className="relative bottom-20 w-full transition-all ease-linear" 
                 src={`https://raw.githubusercontent.com/elRomanoff/${repo.name}/master/descarga.png`} 
                 alt=""  
                 onError={(e)=>{e.target.src = generic}}
