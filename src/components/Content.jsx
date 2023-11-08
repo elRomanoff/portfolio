@@ -23,10 +23,6 @@ export default function Content({filter}) {
         setTimeout(() => {
             e.target.parentNode.classList.toggle("h-36")
         }, 1);
-        setTimeout(() => {
-            e.target.parentNode.classList.toggle("rounded-full")
-        }, 1);
-
         e.target.classList.toggle("bottom-20")
     }
 
@@ -37,10 +33,10 @@ export default function Content({filter}) {
         {filtered.map((repo) => (
         <li className='mt-20' key={repo.id}>
             <h2 className='font-bold text-3xl capitalize my-6'><span className="pink-text text-2xl">•</span> {repo.name}</h2>
-            <div className='w-full h-36 rounded-full object-center overflow-hidden my-3 relative transition-all ease-linear'>
+            <div className='w-full h-36 rounded-full object-center overflow-hidden my-3 relative transition-transform duration-500 '>
                 <img
                  
-                className="relative bottom-20 w-full transition-all ease-linear" 
+                className="relative bottom-20 w-full transition-transform duration-500 ease-linear" 
                 src={`https://raw.githubusercontent.com/elRomanoff/${repo.name}/master/descarga.png`} 
                 alt=""  
                 onError={(e)=>{e.target.src = generic}}

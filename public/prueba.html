@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+
+        .animacion{
+            animation-duration: .5s;
+            animation-name: expand;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes expand{
+
+            from{
+
+            }
+            to{
+                height: auto;
+                bottom:0rem;
+                /* border-radius:0 !important */
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="container  w-[860px] m-auto text-white tracking-wide">
+        <div class='flex column flex-col'>
+            <ul class='text-center'>
+                <li class='mt-20' key={repo.id}>
+                    <h2 class='font-bold text-3xl capitalize my-6'><span class="pink-text text-2xl">•</span> {repo.name}</h2>
+                    <div id="imagen" class='w-full h-36 rounded-full object-center overflow-hidden my-3 relative transition-all ease-linear'>
+                        <img
+                        
+                        class="relative bottom-20 w-full transition-all ease-linear" 
+                        src="https://raw.githubusercontent.com/elRomanoff/chaos-crush/master/descarga.png" 
+                        alt=""  
+                        />
+                    </div>
+                    <b class='text-2xl block my-6'>Link: <a class="pink-text" target="_blank"  rel="noreferrer" href={repo.homepage}>{repo.name}</a></b>
+                    {/* <b class='text-sm block'>Github Link: <span class="pink-text">github.com/doki-doki</span></b> */}
+                    <p class='grey-text leading-6 my-5 text-xl mx-20'>Tools Used: {repo.topics.join(", ")}</p>
+                    <DetailsComponent description={repo.description}/>
+                </li>    
+            </ul>
+        </div>
+    </div> 
+    <script>
+        let element = document.getElementById("imagen")
+        element.addEventListener("click", (e) => {
+            e.target.classList.add("animacion")
+            e.target.parentNode.classList.add("animacion")
+        })
+    </script>
+</body>
+
+</html>
